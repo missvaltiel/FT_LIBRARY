@@ -17,10 +17,24 @@ void		*ft_memchr(const void *byte_arr, int find, int n)
 	int		i;
 
 	i = 0;
-	while (i< n)
+	while (i < n)
 		if (*((char*)byte_arr + i) == (unsigned char)find)
 			return ((void*)((char*)byte_arr + i));
 		else
 			i++;
 	return (NULL);
+}
+
+int		main()
+{
+	char str[] = "Hello";
+	char *ps = ft_memchr(str, 'D', ft_strlen(str));
+	if (ps != NULL)
+		printf ("search character found: %s\n", ps);
+	else
+		printf ("search character found\n");
+	return (0);
+
+
+	return (0);
 }
