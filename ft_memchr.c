@@ -28,13 +28,10 @@ void		*ft_memchr(const void *byte_arr, int find, int n)
 int		main()
 {
 	char str[] = "Hello";
-	char *ps = ft_memchr(str, 'D', ft_strlen(str));
+	char *ps = ft_memchr(str, 'E', ft_strlen(str));
 	if (ps != NULL)
 		printf ("search character found: %s\n", ps);
 	else
-		printf ("search character found\n");
-	return (0);
-
-
+		printf ("search character not found\n");
 	return (0);
 }
