@@ -45,10 +45,11 @@ void	*ft_memset(void *start, int c, size_t, n)
 */
 int		main()
 {
-	int		 		a[20];
-	const char		*len;
+	char		buffer;
 
-	len = (const char *)ft_strlen(a);
-	ft_memset(a, 1, len);
+	buffer[] = "Test for ze program I conjured up."
+	printf("B4: %s\n", buffer);
+	ft_memset(buffer, '*', 4);
+	printf("AF: %s\n", buffer);
 	return (0);
 }

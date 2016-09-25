@@ -12,10 +12,9 @@
 * tolower
 * memchr
 * strchr
-* strrchr
-* bzero
+= strrchr
+= bzero
 ~~~3~~~~
-= memset
 = memcpy
 = strcpy
 = strcat
