@@ -6,36 +6,23 @@
 /*   By: karvin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/22 13:31:26 by karvin            #+#    #+#             */
-/*   Updated: 2016/09/22 23:03:04 by karvin           ###   ########.fr       */
+/*   Updated: 2016/09/24 21:38:54 by karvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
-#include <unistd.h>
-#include <stdio.h>
+
 
 char	*ft_strrchr(const char *str, int c)
 {
-	char	*last;
+	size_t		len;
 
-	last = NULL;
-	while (*str)
+	len = ft_strlen((char *)str);
+	while (len > 0)
 	{
-		if (*str == (const char *)c)
-			last = str;
-		str++;
+		if (str[len] == c)
+			return ((char*)str + len);
+		len--;
 	}
-	return (last);
-}
-
-int	main()
-{
-/*	char	*str;
-	int	i;
-
-	str[] = "Hello";
-*/
-	write (1, *ft_strrchr("hel lo", 32), 3);
-	return (0);
+	return (NULL);
 }
