@@ -10,7 +10,7 @@
 ~~~2~~~~
 * toupper
 * tolower
-= memchr
+* memchr
 = strchr
 = strrchr
 = bzero

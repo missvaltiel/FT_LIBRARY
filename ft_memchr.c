@@ -12,26 +12,15 @@
 
 #include "libft.h"
 
-void		*ft_memchr(const void *byte_arr, int find, int n)
+void		*ft_memchr(const void *str, int c, size_t n)
 {
 	int		i;
 
 	i = 0;
 	while (i < n)
-		if (*((char*)byte_arr + i) == (unsigned char)find)
-			return ((void*)((char*)byte_arr + i));
+		if (*((char*)str + i) == (unsigned char)c)
+			return ((void*)((char*)str + i));
 		else
 			i++;
 	return (NULL);
-}
-
-int		main()
-{
-	char str[] = "Hello";
-	char *ps = ft_memchr(str, 'E', ft_strlen(str));
-	if (ps != NULL)
-		printf ("search character found: %s\n", ps);
-	else
-		printf ("search character not found\n");
-	return (0);
 }
