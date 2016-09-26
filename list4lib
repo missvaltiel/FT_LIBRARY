@@ -15,10 +15,10 @@
 * strrchr
 * bzero
 ~~~3~~~~
-= memcpy
-= strcpy
-= strcat
-= strcmp
+* memcpy
+* strcpy
+* strcat
+* strcmp
 = strstr
 = memmove
 = memcmp
