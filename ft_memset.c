@@ -14,42 +14,10 @@
 
 void		*ft_memset(void *b, int c, size_t len)
 {
-	char		*str;
-	size_t		i;
+	unsigned char		*ptr;
 
-	str = (char *)b;
-	i = 0;
-	while (len > 0)
-	{
-		str[i] = (unsigned char)c;
-		i++;
-		len--;
-	}
+	ptr = (unsigned char *)b;
+	while (len-- > 0)
+		*ptr++ = (unsigned char)c;
 	return (b);
-}
-
-/*
-void	*ft_memset(void *start, int c, size_t, n)
-{
-	unsigned char	*wc;
-
-	wc = (unsigned char *)start;
-	while (n > 0)
-	{
-		*wc = (unsigned char)c;
-		n--;
-		wc++;
-	}
-	return (starti);
-}
-*/
-int		main()
-{
-	char		buffer;
-
-	buffer[] = "Test for ze program I conjured up."
-	printf("B4: %s\n", buffer);
-	ft_memset(buffer, '*', 4);
-	printf("AF: %s\n", buffer);
-	return (0);
 }

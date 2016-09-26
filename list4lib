@@ -12,8 +12,8 @@
 * tolower
 * memchr
 * strchr
-= strrchr
-= bzero
+* strrchr
+* bzero
 ~~~3~~~~
 = memcpy
 = strcpy
