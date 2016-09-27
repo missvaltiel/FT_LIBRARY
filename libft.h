@@ -34,5 +34,6 @@ char		*ft_strcpy(char *dst, const char *src);
 size_t		ft_strlen(const char *str);
 char		ft_strnstr(const char *big, const char *little, size_t len);
 char		*ft_strrchr(const char *str, int c);
+char		*ft_strstr(const char *haystack, const char *needle);
 
 #endif
