@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: karvin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/22 13:31:02 by karvin            #+#    #+#             */
-/*   Updated: 2016/09/27 18:13:36 by karvin           ###   ########.fr       */
+/*   Created: 2016/09/27 23:33:46 by karvin            #+#    #+#             */
+/*   Updated: 2016/09/27 23:41:48 by karvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,26 @@
 
 char		*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t		index;
-	size_t		index2;
-	
-	index2 = 0;
-	if (!*little || !*big)
-		return ((char *)big);
-	while (big[index] != '\0')
+	int		big_in;
+	int		lit_in;
+
+	big_in = 0;
+	lit_in = 0;
+	while (big[big_in] != little[lit_in])
 	{
+		if (big[big_in] == '\0' || len == 0)
+			return (NULL);
+		big_in++;
+		len--;
 	}
-	if ((little > big) || 
-}
-
-int			main()
-{
-	const char *largestring = "Foo Bar Baz";
-	const char *smallstring = "Bar";
-	char *ptr;
-
-	ptr = ft_strnstr(largestring, smallstring, 4)
+	while (big[big_in] != '\0' && big[big_in] == little[lit_in] && len > 0)
+	{
+		big_in;
+		lit_in;
+		len--;
+	}
+	if (little[lit_in] == '\0')
+		return ((char *)big + (big_in - lit_in));
+	else
+		return (NULL);
 }
