@@ -6,7 +6,7 @@
 /*   By: karvin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/22 13:31:33 by karvin            #+#    #+#             */
-/*   Updated: 2016/09/27 18:18:35 by karvin           ###   ########.fr       */
+/*   Updated: 2016/09/28 05:53:47 by karvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ char		*ft_strcat(char *restrict str1, const char *restrict str2);
 char		*ft_strchr(const char *str, int c);
 char		*ft_strcpy(char *dst, const char *src);
 size_t		ft_strlen(const char *str);
-char		ft_strnstr(const char *big, const char *little, size_t len);
+char		*ft_strnstr(const char *big, const char *little, size_t len);
 char		*ft_strrchr(const char *str, int c);
 char		*ft_strstr(const char *big, const char *little);
 
