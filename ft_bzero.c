@@ -6,13 +6,19 @@
 /*   By: karvin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/22 13:26:30 by karvin            #+#    #+#             */
-/*   Updated: 2016/09/24 22:14:50 by karvin           ###   ########.fr       */
+/*   Updated: 2016/09/27 17:14:51 by karvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		ft_bzero(void *str, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-	ft_memset(str, '0', n);
+	unsigned char		*ptr;
+	int					zero;
+
+	ptr = (unisgned char *)s;
+	zero = 0;
+	while (n-- > 0)
+		*ptr++ = (unsigned char)zero;
 }

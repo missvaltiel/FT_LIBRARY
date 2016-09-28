@@ -6,8 +6,12 @@
 /*   By: karvin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/22 13:28:17 by karvin            #+#    #+#             */
-/*   Updated: 2016/09/22 23:03:53 by karvin           ###   ########.fr       */
+/*   Updated: 2016/09/27 16:00:37 by karvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+void		*ft_memmove(void *dst, const void *src, size_t len)
+{
+}
