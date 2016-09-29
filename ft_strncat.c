@@ -14,35 +14,39 @@
 
 char	*ft_strncat(char *dst, const char *src, size_t n)
 {
-	size_t		i;
 	size_t		dst_size;
+	size_t		i;
 
-	i = 0;
 	dst_size = ft_strlen(dst);
-	while (*src != '\0' && i < n)
+	while (src[i] != '\0' && i < n)
 	{
 		dst[dst_size + i] = src[i];
 		i++;
 	}
-	dst
-/*	while (i < n && src[i])
-	{
-		dst[dst_size] = src[i];
-		dst_size++;
-		i++;
-	}
-	dst[dst_size] = '\0';
+	dst[dst_size + i] = '\0';
 	return (dst);
 }
-*/
+/*
 int		main()
 {
-	char		*dst;
-	const char	*src = "I no not what I do.";
-	size_t		n;
+	char		*str1;
+	char		*str2;
+	size_t		*sum_str;
+	size_t		i1;
+	size_t		i2;
+	size_t		sum;
 
-	n = 8;
-	printf("%s", src);
-	printf("\n%s", ft_strncat(dst, src, n));
+	str1 = (char *) malloc(ft_strlen(str1));
+	str2 = (char *) malloc(ft_strlen(str2));
+	i1 = ft_strlen(str1) + 1;
+	i2 = ft_strlen(str2) + 1;
+	sum = i1 + i2;
+	ft_strcpy(str1, "When in doubt");
+	ft_strcpy(str2, " rock it out.");
+	sum_str = (char *) malloc(sum);
+	sum_str = ft_strcat(str1, str2);
+	ft_putstr(sum_str);
+	ft_putstr("\nSuccess.\n");
 	return (0);
 }
+*/

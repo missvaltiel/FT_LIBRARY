@@ -19,18 +19,18 @@
 * strcpy
 * strcat
 * strcmp
-= strstr
-= memmove
-= memcmp
+* strstr
+* memmove
+* memcmp
 ~~~4~~~~
-= strlcat
-= strdup
+* strlcat
+* strdup
 * atoi
-= memccpy
-= strnstr
-= strncmp
-= strncpy
-= strncat
+* memccpy
+* strnstr
+* strncmp
+* strncpy
+* strncat
 ~~~~~~~~
 
 |||||||||||  ADDITIONAL  |||||||||||||

@@ -23,5 +23,5 @@ int		ft_strncpy(char *dst, const char *src, size_t len)
 		i++;
 	}
 	dst[i] = '\0';
-	return (dst);
+	return (*dst);
 }
