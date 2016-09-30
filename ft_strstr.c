@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <string.h>
 #include "libft.h"
 
 char		*ft_strstr(const char *big, const char *little)
@@ -20,6 +21,8 @@ char		*ft_strstr(const char *big, const char *little)
 
 	big_in = 0;
 	lit_in = 0;
+	if (little[lit_in] == '\0')
+		return ((char *)big);
 	while (big[big_in] != little[lit_in])
 	{
 		if (big[big_in] == '\0')
@@ -36,18 +39,12 @@ char		*ft_strstr(const char *big, const char *little)
 	else
 		return (NULL);
 }
+
 int		main()
 {
-	char string[17] = "Test for a string";
-	char *p;
-	p = ft_strstr(string, "for");
-	
-	printf("start");
-	if (p)
-	{
-		printf("first occ of string of for in \"%s\" is \"%s\"", string, p);
-	}
-	else printf("error\n");
-	return (0);
+	char *string = "Test for a string";
+	char *little = "for";
 
+	ft_putstr(ft_strstr(string, little));
+	return (0);
 }

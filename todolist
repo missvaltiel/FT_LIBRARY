@@ -1,0 +1,10 @@
+DONE(NORMS, MATCHES PROTOTYPE, PROTOTYPED IN HEADER, LISTED IN MAKEFILE, NO EXTRA HEADERS, NO MAIN OR COMMENTS, TESTED):
+=author
+
+
+
+TODO TONIGHT:
+=ft_atoi.c
+=ft_bzero.c
+=ft_isalnum.c
+=ft_isascii
