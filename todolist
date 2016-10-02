@@ -1,10 +1,37 @@
-DONE(NORMS, MATCHES PROTOTYPE, PROTOTYPED IN HEADER, LISTED IN MAKEFILE, NO EXTRA HEADERS, NO MAIN OR COMMENTS, TESTED):
-=author
+~*~*~*~*~ONES WITH LETTERS ARE NOT DONE~*~*~*~*~
 
-
-
+================
 TODO TONIGHT:
-=ft_atoi.c
 =ft_bzero.c
 =ft_isalnum.c
-=ft_isascii
+=ft_isaplha.c
+=ft_isasciic
+
+=================
+RUN PERSONAL TESTS(T) & COMPILES(C):
+T
+
+
+=================
+HOME STUFF: PROT IN HEADER(P), LISTED IN MAKEFILE(L), NO EXTRA
+HEADERS(H), NO MAIN/COMMENTS(MC)
+P L H MC
+
+=================
+CLUSTER STUFF: NORMS(N), MATCHES PROTOTYPE(M), DOUBLE CHECK HEADER(D)
+
+N M D
+
+=================
+UNIT TEST:
+ft_atoi.c
+
+
+
+
+=================
+DONE:
+author
+
+
+=================
