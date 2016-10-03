@@ -6,13 +6,29 @@
 /*   By: karvin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/21 15:30:01 by karvin            #+#    #+#             */
-/*   Updated: 2016/09/22 23:04:13 by karvin           ###   ########.fr       */
+/*   Updated: 2016/10/03 00:29:15 by karvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <ctype.h>
 
 int		ft_isascii(int c)
 {
 	return (c >= 0 && c <= 127);
 }
+/*
+int		main()
+{
+	int		i;
+	char	str[11] = "Test OA%1";
+	for (i = 0; i <= 11; i++)
+	{
+		if (isascii(str[i]) != 0)
+		{
+			ft_putnbr(i);
+		}
+	}
+	return (0);
+}
+*/

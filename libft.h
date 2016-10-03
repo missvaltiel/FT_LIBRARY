@@ -6,7 +6,7 @@
 /*   By: karvin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/22 13:31:33 by karvin            #+#    #+#             */
-/*   Updated: 2016/10/02 01:47:44 by karvin           ###   ########.fr       */
+/*   Updated: 2016/10/02 23:37:53 by karvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ void		*ft_memchr(const void *str, int c, size_t n);
 void		*ft_memcpy(void *dest, const void *src, size_t n);
 void		*ft_memset(void *b, int c, size_t len);
 int			ft_putchar(int c);
+void		ft_putnbr(int n);
 int			ft_putstr(const char *str);
 char		*ft_strcat(char *restrict str1, const char *restrict str2);
 char		*ft_strchr(const char *str, int c);

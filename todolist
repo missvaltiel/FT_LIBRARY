@@ -1,30 +1,40 @@
-~*~*~*~*~ONES WITH LETTERS ARE NOT DONE~*~*~*~*~
+================
+TODO
+
+islower
+isprint
+isupper
+memccpy
+memchr
+
+=================
+PERSONAL TEST && COMPILES && // MAIN:
+
+
+
+=================
+COPY
+
+atoi
+bzero
+memset
+isalnum 
+isalpha
+isascii
+isdigit
 
 ================
-TODO TONIGHT:
-=ft_bzero.c
-=ft_isalnum.c
-=ft_isaplha.c
-=ft_isasciic
+PROINHEAD, IN MAKFIL, NO HEADERS, NO MAIN/COMM
 
-=================
-RUN PERSONAL TESTS(T) & COMPILES(C):
-T
 
 
 =================
-HOME STUFF: PROT IN HEADER(P), LISTED IN MAKEFILE(L), NO EXTRA
-HEADERS(H), NO MAIN/COMMENTS(MC)
-P L H MC
+NORMS, MATCHES PROTOTYPE, DOUBLE CHECK HEADER
 
-=================
-CLUSTER STUFF: NORMS(N), MATCHES PROTOTYPE(M), DOUBLE CHECK HEADER(D)
 
-N M D
 
 =================
 UNIT TEST:
-ft_atoi.c
 
 
 
