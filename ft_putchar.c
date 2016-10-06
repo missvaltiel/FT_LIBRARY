@@ -6,14 +6,13 @@
 /*   By: karvin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/22 21:10:32 by karvin            #+#    #+#             */
-/*   Updated: 2016/09/22 23:02:40 by karvin           ###   ########.fr       */
+/*   Updated: 2016/10/04 22:20:52 by karvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_putchar(int c)
+void	ft_putchar(int c)
 {
 	write(1, &c, 1);
-	return (0);
 }

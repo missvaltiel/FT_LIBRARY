@@ -6,12 +6,10 @@
 /*   By: karvin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/26 15:38:25 by karvin            #+#    #+#             */
-/*   Updated: 2016/09/27 22:27:58 by karvin           ###   ########.fr       */
+/*   Updated: 2016/10/04 22:55:38 by karvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
 #include "libft.h"
 
 char		*ft_strstr(const char *big, const char *little)
@@ -38,13 +36,4 @@ char		*ft_strstr(const char *big, const char *little)
 		return ((char *)big + (big_in - lit_in));
 	else
 		return (NULL);
-}
-
-int		main()
-{
-	char *string = "Test for a string";
-	char *little = "for";
-
-	ft_putstr(ft_strstr(string, little));
-	return (0);
 }
