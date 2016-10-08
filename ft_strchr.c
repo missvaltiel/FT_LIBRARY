@@ -6,7 +6,7 @@
 /*   By: karvin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/22 13:30:16 by karvin            #+#    #+#             */
-/*   Updated: 2016/09/27 17:40:42 by karvin           ###   ########.fr       */
+/*   Updated: 2016/10/08 15:40:50 by karvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ char	*ft_strchr(const char *str, int c)
 {
 	while (*str)
 	{
+		if 
 		if ((char)c == *str)
 			return ((char *)str);
 		str++;
