@@ -6,7 +6,7 @@
 /*   By: karvin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/26 15:38:25 by karvin            #+#    #+#             */
-/*   Updated: 2016/10/04 22:55:38 by karvin           ###   ########.fr       */
+/*   Updated: 2016/10/10 12:52:33 by karvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,27 @@
 
 char		*ft_strstr(const char *big, const char *little)
 {
-	size_t		big_in;
-	size_t		lit_in;
+	size_t		bi;
+	size_t		mi;
+	size_t		li;
 
-	big_in = 0;
-	lit_in = 0;
-	if (little[lit_in] == '\0')
+	bi = 0;
+	mi = 0;
+	li = 0;
+	if (ft_strlen(little) == 0)
 		return ((char *)big);
-	while (big[big_in] != little[lit_in])
+	while (big[bi] != 0)
 	{
-		if (big[big_in] == '\0')
-			return (NULL);
-		big_in++;
+		mi = bi;
+		while (big[mi] != 0 && big[mi] == little[li])
+		{
+			if (little[li + 1] == 0)
+				return ((char *)big + mi - li);
+			mi++;
+			li++;
+		}
+		li = 0;
+		bi++;
 	}
-	while (big[big_in] != '\0' && big[big_in] == little[lit_in])
-	{
-		big_in++;
-		lit_in++;
-	}
-	if (little[lit_in] == '\0')
-		return ((char *)big + (big_in - lit_in));
-	else
-		return (NULL);
+	return ((char *)NULL);
 }
