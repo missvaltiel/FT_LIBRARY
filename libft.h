@@ -6,7 +6,7 @@
 /*   By: karvin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/22 13:31:33 by karvin            #+#    #+#             */
-/*   Updated: 2016/10/10 13:05:20 by karvin           ###   ########.fr       */
+/*   Updated: 2016/10/10 14:10:34 by karvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ typedef struct			s_list
 	void				*content;
 	size_t				content_size;
 	struct s_list		*next;
-}						t_byte;
+}						t_list;
 
 int			ft_atoi(const char *str);
 void		ft_bzero(void *s, size_t n);
@@ -38,6 +38,8 @@ void		*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void		*ft_memchr(const void *str, int c, size_t n);
 int			ft_memcmp(const void *s1, const void *s2, size_t n);
 void		*ft_memcpy(void *dest, const void *src, size_t n);
+void		ft_memdel(void **ap);
+void		*ft_memmalloc(size_t size);
 void		*ft_memmove(void *dst, const void *src, size_t len);
 void		*ft_memset(void *b, int c, size_t len);
 void		ft_putchar(int c);
@@ -53,6 +55,7 @@ size_t		ft_strlen(const char *str);
 char		*ft_strncat(char *dst, const char *src, size_t n);
 int			ft_strncmp(char *s1, char *s2, unsigned int n);
 char		*ft_strncpy(char *dst, const char *src, size_t len);
+char		*ft_strnew(size_t size);
 char		*ft_strnstr(const char *big, const char *little, size_t len);
 char		*ft_strrchr(const char *str, int c);
 char		*ft_strstr(const char *big, const char *little);
