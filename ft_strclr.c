@@ -2,27 +2,16 @@
 
 void		ft_strclr(char *s)
 {
-	char		*buf;
-	size_t		n;
-	unsigned char	c;
+	int		i;
 
-	buf = (char *)s;
-	i = ft_strlen(s);
-	c = 'a';
-	while (n > 0)
+	i = 0;
+	if (s)
 	{
-		*buf = c;
-		n--;
-		buf++;
+		i = ft_strlen(s);
+		while (i >= 0)
+		{
+			s[i] = '\0';
+			i--;
+		}
 	}
-}
-
-int		main()
-{
-	char *str = "I really hope this works.";
-	ft_putstr(str);
-	ft_putchar('\n');
-	ft_strclr(str);
-	ft_putstr(str);
-	return (0);
 }
