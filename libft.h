@@ -6,7 +6,7 @@
 /*   By: karvin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/22 13:31:33 by karvin            #+#    #+#             */
-/*   Updated: 2016/10/10 14:26:14 by karvin           ###   ########.fr       */
+/*   Updated: 2016/10/11 00:52:13 by karvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,8 +52,12 @@ int			ft_strcmp(const char *s1, const char *s2);
 char		*ft_strcpy(char *dst, const char *src);
 void		ft_strdel(char **as);
 char		*ft_strdup(const char *str);
+void		ft_striter(char *s, void (*f)(char*));
+void		ft_striteri(char *s, void (*f)(unsigned int, char *));
 size_t		ft_strlcat(char *dst, const char *src, size_t size);
 size_t		ft_strlen(const char *str);
+char		*ft_strmap(char const *s, char (*f)(char));
+char		*ftstrmapi(char const *s, char (*f)(unsigned int, char));
 char		*ft_strncat(char *dst, const char *src, size_t n);
 int			ft_strncmp(char *s1, char *s2, unsigned int n);
 char		*ft_strncpy(char *dst, const char *src, size_t len);
