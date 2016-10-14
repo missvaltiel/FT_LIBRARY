@@ -8,4 +8,5 @@ int    ft_strequ(char const *s1, char const *s2)
            return (1);
        return (0);
     }
+    return (0);
 }
