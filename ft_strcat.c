@@ -25,5 +25,5 @@ char	*ft_strcat(char *dst, const char *src)
 		i++;
 	}
 	dst[dstlen + i] = '\0';
-	return (dst);
+    return (dst);
 }
