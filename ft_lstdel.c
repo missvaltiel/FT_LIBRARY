@@ -1,34 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_lstdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: karvin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/10/18 09:54:02 by karvin            #+#    #+#             */
-/*   Updated: 2016/10/18 12:55:54 by karvin           ###   ########.fr       */
+/*   Created: 2016/10/18 11:55:22 by karvin            #+#    #+#             */
+/*   Updated: 2016/10/18 12:01:48 by karvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_strtrim(char const *s)
+void		ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
-	size_t		start;
-	size_t		len;
-	char		*res;
+	t_list		*next;
 
-	if (s != NULL)
+	while (*alst != NULL)
 	{
-		start = 0;
-		while (ft_isbblank(s[start]))
-			start++;
-		len = ft_strlen(s + start);
-		if (len > 0)
-			while (ft_isbblank(s[start + len - 1]))
-				len--;
-		res = ft_strsub(s, start, len);
-		return (res);
+		next = (*alst)->next;
+		ft_lstdelone(alst, del);
+		*alst = next;
 	}
-	return (NULL);
 }

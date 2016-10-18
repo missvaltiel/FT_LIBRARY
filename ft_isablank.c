@@ -1,34 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_isablank.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: karvin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/10/18 09:54:02 by karvin            #+#    #+#             */
-/*   Updated: 2016/10/18 12:55:54 by karvin           ###   ########.fr       */
+/*   Created: 2016/10/18 11:33:07 by karvin            #+#    #+#             */
+/*   Updated: 2016/10/18 11:34:14 by karvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_strtrim(char const *s)
+int		ft_isablank(int c)
 {
-	size_t		start;
-	size_t		len;
-	char		*res;
-
-	if (s != NULL)
-	{
-		start = 0;
-		while (ft_isbblank(s[start]))
-			start++;
-		len = ft_strlen(s + start);
-		if (len > 0)
-			while (ft_isbblank(s[start + len - 1]))
-				len--;
-		res = ft_strsub(s, start, len);
-		return (res);
-	}
-	return (NULL);
+	if (c == ' ' || c == '\f' || c == '\t' || c == '\r' || c == '\v' ||
+			c == '\n')
+		return (1);
+	return (0);
 }

@@ -6,26 +6,19 @@
 /*   By: karvin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/22 21:15:03 by karvin            #+#    #+#             */
-/*   Updated: 2016/10/11 01:18:55 by karvin           ###   ########.fr       */
+/*   Updated: 2016/10/18 11:26:22 by karvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+#define ABSOLUTE(X) (X) < 0 ? -(X) : (X)
+
 void		ft_putnbr(int n)
 {
 	if (n < 0)
-	{
 		ft_putchar('-');
-		n = n * -1;
-	}
-	if (n >= 10)
-	{
-		ft_putnbr(n / 10);
-		ft_putnbr(n % 10);
-	}
-	else
-	{
-		ft_putchar(n + '0');
-	}
+	if (n / 10 != 0)
+		ft_putnbr(ft_absolute(n / 10));
+	ft_putchar('0' + ft_absolute(n % 10));
 }

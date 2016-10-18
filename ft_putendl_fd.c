@@ -1,8 +1,29 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: karvin <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/10/18 09:36:31 by karvin            #+#    #+#             */
+/*   Updated: 2016/10/18 12:54:58 by karvin           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
-void        ft_putendl_fd(char const *s, int fd)
+void		ft_putendl_fd(char const *s, int fd)
 {
-    write(fd, s, ft_strlen(s));
-    ft_putchar('\n');
+	size_t		i;
+
+	i = 0;
+	if (s)
+	{
+		while (s[i] != '\0')
+		{
+			write(fd, &s[i], 1);
+			i++;
+		}
+		ft_putchar_fd('\n', fd);
+	}
 }

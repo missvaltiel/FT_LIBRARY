@@ -6,7 +6,7 @@
 /*   By: karvin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/22 13:30:07 by karvin            #+#    #+#             */
-/*   Updated: 2016/10/04 22:45:53 by karvin           ###   ########.fr       */
+/*   Updated: 2016/10/18 10:00:08 by karvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ char	*ft_strcat(char *dst, const char *src)
 		i++;
 	}
 	dst[dstlen + i] = '\0';
-    return (dst);
+	return (dst);
 }

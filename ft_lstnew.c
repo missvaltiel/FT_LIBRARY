@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: karvin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/10/18 09:54:02 by karvin            #+#    #+#             */
-/*   Updated: 2016/10/18 12:55:54 by karvin           ###   ########.fr       */
+/*   Created: 2016/10/18 11:43:56 by karvin            #+#    #+#             */
+/*   Updated: 2016/10/18 11:50:17 by karvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_strtrim(char const *s)
+t_list		*ft_lstnew(void const *content, size_t content_size)
 {
-	size_t		start;
-	size_t		len;
-	char		*res;
+	t_list		*res;
 
-	if (s != NULL)
+	if ((res = (t_list *)malloc(sizeof(*link))) == NULL)
+		return (NULL);
+	if (content != NULL && content_size != 0)
 	{
-		start = 0;
-		while (ft_isbblank(s[start]))
-			start++;
-		len = ft_strlen(s + start);
-		if (len > 0)
-			while (ft_isbblank(s[start + len - 1]))
-				len--;
-		res = ft_strsub(s, start, len);
-		return (res);
+		if ((res->content = malloc(content_size)) == NULL)
+			return (NULL);
+		ft_memcpy(res->content, content, content_size);
+		res->content_size = content_size;
 	}
-	return (NULL);
+	else
+	{
+		res->content = NULL;
+		res->content_size = 0;
+	}
+	return (res);
 }
