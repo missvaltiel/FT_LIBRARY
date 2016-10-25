@@ -6,7 +6,7 @@
 /*   By: karvin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/27 23:33:46 by karvin            #+#    #+#             */
-/*   Updated: 2016/10/01 23:50:48 by karvin           ###   ########.fr       */
+/*   Updated: 2016/10/21 15:05:53 by karvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,26 @@
 
 char		*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	int		big_in;
-	int		lit_in;
+	size_t	big_in;
+	size_t	big_sin;
+	size_t	lit_in;
 
 	big_in = 0;
-	lit_in = 0;
-	if (little[lit_in] == '\0')
-		return ((char *)big);
-	while (big[big_in] != little[lit_in])
+	if (ft_strlen(little) == 0)
+		return ((char*)big);
+	while (big[big_in] != 0 && big_in < len)
 	{
-		if (big[big_in] == '\0' || len == 0)
-			return (NULL);
+		big_sin = big_in;
+		lit_in = 0;
+		while (big_sin < len && big[big_sin] == little[lit_in])
+		{
+			if (little[lit_in + 1] == 0)
+				return ((char *)big + big_sin - lit_in);
+			big_sin++;
+			lit_in++;
+		}
+		lit_in = 0;
 		big_in++;
-		len--;
 	}
-	while (big[big_in] != '\0' && big[big_in] == little[lit_in] && len > 0)
-	{
-		big_in++;
-		lit_in++;
-		len--;
-	}
-	if (little[lit_in] == '\0')
-		return ((char *)big + (big_in - lit_in));
-	else
-		return (NULL);
+	return (NULL);
 }

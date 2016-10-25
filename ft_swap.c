@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: karvin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/22 13:30:16 by karvin            #+#    #+#             */
-/*   Updated: 2016/10/21 15:05:34 by karvin           ###   ########.fr       */
+/*   Created: 2016/10/20 12:45:39 by karvin            #+#    #+#             */
+/*   Updated: 2016/10/20 12:46:45 by karvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *str, int c)
+void		ft_swap(int *a, int *b)
 {
-	return ((char*)ft_memchr((void*)str, c, ft_strlen(str) + 1));
+	int		tmp;
+
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
 }

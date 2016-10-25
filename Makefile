@@ -6,7 +6,7 @@
 #    By: karvin <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/09/21 10:00:36 by karvin            #+#    #+#              #
-#    Updated: 2016/10/18 12:53:07 by karvin           ###   ########.fr        #
+#    Updated: 2016/10/20 14:20:02 by karvin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ SRC = ft_absolute.c ft_atoi.c ft_bzero.c ft_isablank.c ft_isalnum.c \
 	  ft_strlcat.c ft_strlen.c ft_strmap.c ft_strmapi.c ft_strncat.c \
 	  ft_strncmp.c ft_strncpy.c ft_strnequ.c ft_strnew.c ft_strnstr.c \
 	  ft_strrchr.c ft_strsplit.c ft_strstr.c ft_strsub.c ft_strtrim.c \
-	  ft_tolower.c ft_toupper.c \
+	  ft_swap.c ft_tolower.c ft_toupper.c \
 
 OBJ = ${SRC:.c=.o}
 
